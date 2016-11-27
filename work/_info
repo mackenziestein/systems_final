@@ -10,7 +10,7 @@ cModel Technology
 Z0 d/home/class19/mstein19/cs161/DataPath
 vadder
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1478877396
+Z2 !s110 1480287483
 !i10b 1
 !s100 ?OPS[<eAO@3D`4HUBld]Q3
 Ig_A_[@PXRMB<;lHRF9cJQ2
@@ -18,7 +18,7 @@ Z3 V`JN@9S9cnhjKRR_L]QIcM3
 !s105 adder_sv_unit
 S1
 R0
-Z4 w1478876575
+Z4 w1480286834
 8adder.sv
 Fadder.sv
 L0 5
@@ -26,7 +26,7 @@ Z5 OV;L;10.3d;59
 r1
 !s85 0
 31
-Z6 !s108 1478877396.831340
+Z6 !s108 1480287483.900822
 Z7 !s107 tester3.sv|registerFile.sv|mux4to1B8.sv|mux4to1B5.sv|mux4to1B4.sv|mux4to1B32.sv|mux4to1B1.sv|mux2to1B5.sv|instructionMemoryTest1.sv|enabledRegister.sv|DataPath.sv|dataMemory.sv|Control.sv|ALU.sv|adder.sv|
 Z8 !s90 adder.sv|ALU.sv|Control.sv|dataMemory.sv|DataPath.sv|enabledRegister.sv|instructionMemoryTest1.sv|mux2to1B5.sv|mux4to1B1.sv|mux4to1B32.sv|mux4to1B4.sv|mux4to1B5.sv|mux4to1B8.sv|registerFile.sv|tester3.sv|
 !i113 1
@@ -80,13 +80,13 @@ vdataMemory
 R1
 R2
 !i10b 1
-!s100 F_HK=HbbFjzf;aeRAgTfK2
-ICN2iRI@AU5l=_kL4I;IoY1
+!s100 oVZ`fm;>f[^iJo]]8;cSK3
+IB4W[_W:lRNOo]g1?bOcTZ1
 R3
 !s105 dataMemory_sv_unit
 S1
 R0
-R4
+w1480287457
 8dataMemory.sv
 FdataMemory.sv
 L0 3
@@ -109,7 +109,7 @@ R3
 !s105 DataPath_sv_unit
 S1
 R0
-w1478877028
+R4
 8DataPath.sv
 FDataPath.sv
 L0 1
@@ -310,8 +310,8 @@ vregisterFile
 R1
 R2
 !i10b 1
-!s100 ICbl]`i3Y@b1ZAhH_<?_:2
-InILTYSYmfTihg@`ZceJ;b3
+!s100 ?l4<6]8QbjdXAdO=N6RX50
+IJQX[`?0;5PMbZ]==BPiGT1
 R3
 !s105 registerFile_sv_unit
 S1
@@ -331,7 +331,7 @@ R8
 nregister@file
 vtester3
 R1
-R2
+!s110 1480287484
 !i10b 1
 !s100 ^1YH[?db0Hae?jgMmFO512
 IkfU_ZMDXK>GgDciZ1?doA0
@@ -339,7 +339,7 @@ R3
 !s105 tester3_sv_unit
 S1
 R0
-w1478877393
+R4
 8tester3.sv
 Ftester3.sv
 L0 3

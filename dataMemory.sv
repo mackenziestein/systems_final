@@ -31,7 +31,7 @@ always @(posedge clk)
        $display("addr %h", addr);   
        
        theStuff[addr[31:2]] <= writeData;
-       $display("the stuff %p", theStuff);
+       $display("the stuff 31:2 %p", theStuff);
        
     end
 
