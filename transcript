@@ -1,0 +1,85 @@
+# vsim -lib work -c tester3 
+# Start time: 10:16:39 on Nov 11,2016
+# Loading sv_std.std
+# Loading work.tester3
+# Loading work.DataPath
+# Loading work.enabledRegister
+# Loading work.mux4to1B32
+# Loading work.mux4to1B4
+# Loading work.mux4to1B1
+# Loading work.adder
+# Loading work.instructionMemory
+# Loading work.Control
+# Loading work.registerFile
+# Loading work.ALU
+# Loading work.dataMemory
+# register 0 00000000 
+# register 1 00000000 
+# PC Address : 00000000
+# PC D: 00000004 
+# Instruction : 8c010008
+# reg write enable 1
+# Reg 0 write signal 0
+#  - 
+# Writing address          8 with          0
+# addr 00000008
+# the stuff[addr[31:2]] '{x, 0, 99, 99, 15, 10, 12}
+# register 0 00000000 
+# register 1 0000000f 
+# PC Address : 00000004
+# PC D: 00000008 
+# Instruction : ac010010
+# reg write enable 0
+# Reg 0 write signal 0
+#  - 
+# Writing address         16 with         15
+# addr 00000010
+# the stuff[addr[31:2]] '{x, 0, 99, 99, 0, 10, 12}
+# register 0 00000000 
+# register 1 0000000f 
+# PC Address : 00000008
+# PC D: 0000000c 
+# Instruction : 8c200001
+# reg write enable 1
+# Reg 0 write signal 1
+#  - 
+# Writing address         16 with          0
+# addr 00000010
+# the stuff[addr[31:2]] '{x, 0, 15, 99, 0, 10, 12}
+# register 0 0000000f 
+# register 1 0000000f 
+# PC Address : 0000000c
+# PC D: 00000010 
+# Instruction : 8c200005
+# reg write enable 1
+# Reg 0 write signal 1
+#  - 
+# Writing address         20 with         15
+# addr 00000014
+# the stuff[addr[31:2]] '{x, 0, 0, 99, 0, 10, 12}
+# register 0 00000000 
+# register 1 0000000f 
+# PC Address : 00000010
+# PC D: 00000014 
+# Instruction : 8c010000
+# reg write enable 1
+# Reg 0 write signal 0
+#  - 
+# Writing address          0 with         15
+# addr 00000000
+# the stuff[addr[31:2]] '{x, 15, 0, 99, 0, 10, 12}
+# register 0 00000000 
+# register 1 0000000c 
+# PC Address : 00000014
+# PC D: 00000018 
+# Instruction : xxxxxxxx
+# reg write enable x
+# Reg 0 write signal x
+#  - 
+# Simulation ending after           5 clock cycles 
+# ** Note: $stop    : tester3.sv(42)
+#    Time: 200 ns  Iteration: 1  Instance: /tester3
+# Break in Module tester3 at tester3.sv line 42
+# Stopped at tester3.sv line 42
+# End time: 10:19:41 on Nov 11,2016, Elapsed time: 0:03:02
+# Errors: 0, Warnings: 0
