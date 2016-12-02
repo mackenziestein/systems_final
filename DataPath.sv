@@ -1,5 +1,5 @@
 module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
-
+///////////////////////////////////
    // The clock will be driven from the testbench 
    // The instruction, pcQ and pcD are sent to the testbench to
    // make debugging easier
