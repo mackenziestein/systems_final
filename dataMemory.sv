@@ -27,12 +27,8 @@ assign read = theStuff[addr[6:2]];
 always @(posedge clk)
   if (writeEnable)
     begin
-       $display("Writing address %d with %d", addr,writeData);
-       $display("addr %h", addr);   
-       
+       $display("Writing address %d with %d", addr,writeData);       
        theStuff[addr[31:2]] <= writeData;
-       $display("the stuff 31:2 %p", theStuff);
-       
     end
 
 endmodule

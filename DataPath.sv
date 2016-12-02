@@ -77,7 +77,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
 
    assign clk = clock;
    assign A1 = instr[25:21];
-   assign A3 = instr[20:16];
+   assign A3 = instr[20:16];  // A3 is either 20:16 or 15:11, based on RegDst
    assign A2 = instr[20:16];
    assign WE3 = regWriteEnable;
       

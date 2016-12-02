@@ -30,13 +30,13 @@ always @ (negedge clock) begin
    $display("PC Address : %h",pcQ);
    $display("PC D: %h ",pcD);
    $display("Instruction : %h", instruction);
-   $display("reg write enable %b",regWriteEnable);
+   $display("Reg write enable %b",regWriteEnable);
    $display("Reg 0 write signal %b", dut.theRegisters.yesWrite0);
    
    $display(" - ");
    
    
-   if (clockCount == 5)
+   if (clockCount == 6)
      begin
 	$display("Simulation ending after %d clock cycles ",clockCount);
 	$stop;

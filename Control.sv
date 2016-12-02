@@ -20,7 +20,7 @@ module Control(ins, memWrite, regWriteEnable, alu4, alu3, alu2, alu1, alu0);
    assign regWriteEnable = lw;
 
    //You need to change this to implement sw
-   assign memWrite = 1'b1;
+   assign memWrite = sw;
    
 
    endmodule

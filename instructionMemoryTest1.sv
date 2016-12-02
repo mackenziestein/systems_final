@@ -10,7 +10,8 @@ begin
    instructs[2] = 32'b100011_00001_00000_0000000000000001;  // lw r0 <- 15 from location 4
    instructs[3] = 32'b100011_00001_00000_0000000000000101;  // lw r0 <- 0 from location 5  
    instructs[4] = 32'b100011_00000_00001_0000000000000000;  // lw r1 <- 1100   (000c)
-
+   instructs[5] = 32'b100000_00001_00000_0000000000000001;
+   
 end
 
 assign RD = instructs[A[6:2]];
