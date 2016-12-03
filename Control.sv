@@ -10,6 +10,7 @@ module Control(ins, memWrite, regWriteEnable, alu4, alu3, alu2, alu1, alu0);
    assign lw = ins[31] & ~ins[30] & ~ins[29] & ~ins[28] & ins[27] & ins[26];
    assign sw = ins[31] & ~ins[30] & ins[29] & ~ins[28] & ins[27] & ins[26];
    
+   
    assign alu1 = 1'b0;
    assign alu0 = 1'b0;
    assign alu2 = 1'b0;
@@ -18,8 +19,6 @@ module Control(ins, memWrite, regWriteEnable, alu4, alu3, alu2, alu1, alu0);
 
    
    assign regWriteEnable = lw;
-
-   //You need to change this to implement sw
    assign memWrite = sw;
    
 
