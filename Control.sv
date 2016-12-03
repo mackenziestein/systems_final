@@ -7,10 +7,21 @@ module Control(ins, memWrite, regWriteEnable, alu4, alu3, alu2, alu1, alu0);
    logic [0:0] lw, sw;
 
    
+   assign andr = ins[31] & ~ins[30] & ~ins[29] & ~ins[28] & ~ins[27] & ~ins[26];
    assign lw = ins[31] & ~ins[30] & ~ins[29] & ~ins[28] & ins[27] & ins[26];
    assign sw = ins[31] & ~ins[30] & ins[29] & ~ins[28] & ins[27] & ins[26];
+   assign jr = ~ins[31] & ~ins[30] & ins[29] & ~ins[28] & ~ins[27] & ~ins[26];
+   assign jal = ~ins[31] & ~ins[30] & ~ins[29] & ~ins[28] & ins[27] & ins[26];
+   assign nor = ins[31] & ~ins[30] & ~ins[29] & ins[28] & ins[27] & ~ins[26];
+   assign nori = ~ins[31] & ~ins[30] & ins[29] & ins[28] & ins[27] & ~ins[26];
+   assign notr = ~ins[31] & ~ins[30] & ~ins[29] & ins[28] & ~ins[27] & ~ins[26];
+   // pseudoinstruction - actually nor
+   assign bleu = ~ins[31] & ins[30] & ~ins[29] & ~ins[28] & ~ins[27] & ~ins[26];
+   // evaluate rs <= rt, then jump to label
+   assign rolv = ~ins[31] & ~ins[30] & ~ins[29] & ~ins[28] & ~ins[27] & ~ins[26];
+   assign rorv = ~ins[31] & ~ins[30] & ~ins[29] & ~ins[28] & ins[27] & ~ins[26];
    
-   
+	    
    assign alu1 = 1'b0;
    assign alu0 = 1'b0;
    assign alu2 = 1'b0;
