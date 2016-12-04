@@ -1,4 +1,4 @@
-module Control(ins, memWrite, regWriteEnable, alu4, alu3, alu2, alu1, alu0);
+module Control(ins, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, regWriteEnable, alu4, alu3, alu2, alu1, alu0);
 
    input logic [31:0] ins;
    output logic [0:0] memWrite, regWriteEnable, alu4, alu3, alu2, alu1, alu0;
@@ -28,9 +28,14 @@ module Control(ins, memWrite, regWriteEnable, alu4, alu3, alu2, alu1, alu0);
    assign alu3 = 1'b0;
    assign alu4 = 1'b0;
 
-   
-   assign regWriteEnable = lw;
+
+   assign memToReg = 1'b0;
    assign memWrite = sw;
+   assign branchEnable = 1'b0;
+   assign ALUControl = 1'b0;
+   assign ALUSrc = 1'b0;
+   assign regDst = 1'b0;
    
+   assign regWriteEnable = lw;   
 
    endmodule

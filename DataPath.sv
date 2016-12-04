@@ -51,14 +51,15 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
 
    assign instA = pcQ;
 
-   // construct the control unit  This unit generates the signals that control the datapath
+   // construct the control unit  
+   // This unit generates the signals that control the datapath
    // it will have many more ports later
 
 
    logic [0:0] 	memWrite, alu4, alu3, alu2, alu1, alu0;
    
    
-   Control theControl(instr, memWrite, regWriteEnable, alu4, alu3, alu2, alu1, alu0);
+   Control theControl(instr, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, regWriteEnable, alu4, alu3, alu2, alu1, alu0);
    
    
    // construct the register file with (currently mostly) unused values to connect to it
