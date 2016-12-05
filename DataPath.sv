@@ -97,7 +97,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
 
    logic [31:0]        SrcA, SrcB, ALUResult;
    logic [4:0] 	       aluSelect;
-   logic [32:0]        muxSrcBin;
+   logic [31:0]        muxSrcBin, Result, WD, dataA;
    
    mux4to1B32 muxRD2(1'b0, ALUSrc, 32'b0, 32'b0, SignImm, RD2, muxSrcBin);
 
@@ -106,17 +106,20 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
 
    ALU theALU(SrcA, SrcB, 5'b0, ALUResult);    
    
-   logic [31:0]        WD,dataA;
    logic [0:0] 	       WE;
 
    assign dataA = ALUResult;
    
-
    dataMemory data(dataA, RD, WD, clk, WE);
-   
-   assign WD3 = RD;
+
+
+   mux4to1B32 muxRD(1'b0, memToReg, 32'b0, 32'b0, RD, ALUResult, Result);
+
+   assign WD3 = result;
    assign WD = RD2;
    assign WE = memWrite;
+
+   
    
    
 endmodule
