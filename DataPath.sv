@@ -97,7 +97,8 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
 
    logic [31:0]        SrcA, SrcB, ALUResult;
    logic [4:0] 	       aluSelect;
-
+   logic [32:0]        muxSrcBin;
+   
    mux4to1B32 muxRD2(1'b0, ALUSrc, 32'b0, 32'b0, RD2, SignImm, muxSrcBin);
 
    assign SrcB = muxSrcBin;
