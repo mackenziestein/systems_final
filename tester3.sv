@@ -36,7 +36,7 @@ always @ (negedge clock) begin
    $display(" - ");
    
    
-   if (clockCount == 6)
+   if (clockCount == 20)
      begin
 	$display("Simulation ending after %d clock cycles ",clockCount);
 	$stop;
