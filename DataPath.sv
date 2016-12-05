@@ -59,13 +59,13 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    logic [0:0] 	memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, jump, alu4, alu3, alu2, alu1, alu0;
    
    
-   Control theControl(instr, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, jump, alu4, alu3, alu2, alu1, alu0);
+   Control theControl(instr, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, regWriteEnable, jump, alu4, alu3, alu2, alu1, alu0);
    
    
    // construct the register file with (currently mostly) unused values to connect to it
    
    logic [4:0] 	       A3, A2, A1;
-   logic 	       WE3;
+   logic 	       WE3, clk;
    logic [31:0]        WD3, RD1, RD2;
 
    
