@@ -10,6 +10,8 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    output logic [31:0] pcQ;
    output logic [31:0] pcD;
    output logic [0:0] regWriteEnable;
+   logic [31:0]       pcPlus4;
+   
    
    // The PC is just a register
    // for now, it is always enabled so it updates on every clock cycle
@@ -37,7 +39,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    
    assign adderIn1 = pcQ;
    assign adderIn2 = constant4;
-   assign pcD = adderOut;
+   assign pcPlus4 = adderOut;
 
    
    // construct the instuctionmemory
@@ -84,10 +86,6 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    assign A3 = A3assign;  // A3 is either 20:16 or 15:11, based on RegDst
    assign A2 = instr[20:16];
    assign WE3 = regWriteEnable;
-
-   
-     
-   
       
    logic [31:0]        SignImm;
 
@@ -119,7 +117,15 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    assign WD = RD2;
    assign WE = memWrite;
 
+   logic [31:0]        PCJump, jumpInst, PCNext;
+   logic [1:0] 	       constant0;
    
+   assign constant0 = 2'b0;
+   assign jumpInst = {SignImm[29:0], constant0[1:0]};
+   assign PCJump = {pcPlus4[31:28], jumpInst[27:0]};
+
+   mux4to1B32 jumpPC(1'b0, jump, 32'b0, 32'b0, PCJump, pcPlus4, PCNext);
+   assign pcD = PCNext;
    
    
 endmodule
