@@ -75,12 +75,19 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    // attach the A1 port to 5 bits of the instruction
 
    logic [31:0]   RD;
-
+   logic [4:0] 	  A3assign;
+ 
+   mux2to1B5 muxA3(regDst, instr[20:16], instr[15:11], A3assign);
+   
    assign clk = clock;
    assign A1 = instr[25:21];
-   assign A3 = instr[20:16];  // A3 is either 20:16 or 15:11, based on RegDst
+   assign A3 = A3assign;  // A3 is either 20:16 or 15:11, based on RegDst
    assign A2 = instr[20:16];
    assign WE3 = regWriteEnable;
+
+   
+     
+   
       
    logic [31:0]        SignImm;
 
