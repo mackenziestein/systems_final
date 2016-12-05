@@ -14,7 +14,7 @@ module ALU(input logic  [31:0] I1,
    
    assign sum = I1 + I2;
 
-   // also need: nor, nori (same as nor?), not (nor w 0), ?? for rotations
+   // also need: nor, nori (same as nor?), not (nor w 0), sub for rotations
 
    assign O = sum;
    
