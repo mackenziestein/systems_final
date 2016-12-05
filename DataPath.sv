@@ -115,7 +115,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
 
    mux4to1B32 muxRD(1'b0, memToReg, 32'b0, 32'b0, RD, ALUResult, Result);
 
-   assign WD3 = result;
+   assign WD3 = Result;
    assign WD = RD2;
    assign WE = memWrite;
 
