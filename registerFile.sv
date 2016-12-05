@@ -11,7 +11,13 @@ module registerFile(input logic [4:0] A1,
 		    );
    
    logic  [0:0] yesWrite0;
-   logic  [0:0] yesWrite1;
+   logic [0:0] 	yesWrite1;
+   logic [0:0] 	yesWrite2;
+   logic [0:0] 	yesWrite3;
+   logic [0:0] 	yesWrite4;
+   logic [0:0] 	yesWrite5;
+   logic [0:0] 	yesWrite6;
+   logic  [0:0] yesWrite7;
     
    logic [31:0]  reg0, reg1;
    

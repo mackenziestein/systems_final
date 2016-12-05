@@ -4,7 +4,7 @@ module Control(ins, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst
    output logic [0:0] memWrite, regWriteEnable, alu4, alu3, alu2, alu1, alu0;
 
 
-   logic [0:0] lw, sw;
+   logic [0:0] andr, lw, sw, jr, jal, norr, nori, notr, bleu, rolv, rorv;
 
    
    assign andr = ins[31] & ~ins[30] & ~ins[29] & ~ins[28] & ~ins[27] & ~ins[26];

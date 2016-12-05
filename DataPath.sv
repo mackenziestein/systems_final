@@ -56,7 +56,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    // it will have many more ports later
 
 
-   logic [0:0] 	memWrite, alu4, alu3, alu2, alu1, alu0;
+   logic [0:0] 	memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, jump, alu4, alu3, alu2, alu1, alu0;
    
    
    Control theControl(instr, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, jump, alu4, alu3, alu2, alu1, alu0);
