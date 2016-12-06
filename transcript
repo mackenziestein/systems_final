@@ -1,5 +1,5 @@
 # vsim -lib work -c tester3 
-# Start time: 10:58:27 on Dec 02,2016
+# Start time: 16:49:22 on Dec 05,2016
 # Loading sv_std.std
 # Loading work.tester3
 # Loading work.DataPath
@@ -11,35 +11,60 @@
 # Loading work.instructionMemory
 # Loading work.Control
 # Loading work.registerFile
+# Loading work.mux2to1B5
 # Loading work.ALU
 # Loading work.dataMemory
 # register 0 00000000 
 # register 1 00000000 
+# register 2 00000000 
+# register 3 00000000 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
 # PC Address : 00000000
 # PC D: 00000004 
 # Instruction : 8c010008
 # Reg write enable 1
-# Reg 0 write signal 0
+# Reg 0 write signal 1
 #  - 
 # register 0 00000000 
-# register 1 0000000f 
+# register 1 00000000 
+# register 2 00000000 
+# register 3 00000000 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
 # PC Address : 00000004
 # PC D: 00000008 
 # Instruction : ac010010
 # Reg write enable 0
 # Reg 0 write signal 0
 #  - 
-# Writing address         16 with         15
+# Writing address          0 with          0
 # register 0 00000000 
-# register 1 0000000f 
+# register 1 00000000 
+# register 2 00000000 
+# register 3 00000000 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
 # PC Address : 00000008
 # PC D: 0000000c 
 # Instruction : 8c200001
 # Reg write enable 1
 # Reg 0 write signal 1
 #  - 
-# register 0 0000000f 
-# register 1 0000000f 
+# register 0 00000000 
+# register 1 00000000 
+# register 2 00000000 
+# register 3 00000000 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
 # PC Address : 0000000c
 # PC D: 00000010 
 # Instruction : 8c200005
@@ -47,32 +72,101 @@
 # Reg 0 write signal 1
 #  - 
 # register 0 00000000 
-# register 1 0000000f 
+# register 1 00000000 
+# register 2 00000000 
+# register 3 00000000 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
 # PC Address : 00000010
 # PC D: 00000014 
 # Instruction : 8c010000
 # Reg write enable 1
-# Reg 0 write signal 0
+# Reg 0 write signal 1
 #  - 
 # register 0 00000000 
-# register 1 0000000c 
+# register 1 00000000 
+# register 2 00000000 
+# register 3 00000000 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
 # PC Address : 00000014
 # PC D: 00000018 
-# Instruction : 80200001
-# Reg write enable 0
-# Reg 0 write signal 0
+# Instruction : 8c020004
+# Reg write enable 1
+# Reg 0 write signal 1
 #  - 
-# register 0 00000000 
-# register 1 0000000c 
+# register 0 0000003f 
+# register 1 00000000 
+# register 2 00000000 
+# register 3 00000000 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
 # PC Address : 00000018
 # PC D: 0000001c 
-# Instruction : xxxxxxxx
-# Reg write enable x
-# Reg 0 write signal x
+# Instruction : 80221800
+# Reg write enable 1
+# Reg 0 write signal 0
 #  - 
-# Simulation ending after           6 clock cycles 
-# ** Note: $stop    : tester3.sv(42)
-#    Time: 240 ns  Iteration: 1  Instance: /tester3
-# Break in Module tester3 at tester3.sv line 42
-# Stopped at tester3.sv line 42
+# register 0 0000003f 
+# register 1 00000000 
+# register 2 0000003f 
+# register 3 00000000 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
+# PC Address : 0000001c
+# PC D: 00000020 
+# Instruction : 98221800
+# Reg write enable 1
+# Reg 0 write signal 0
+#  - 
+# register 0 0000003f 
+# register 1 00000000 
+# register 2 0000003f 
+# register 3 00000000 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
+# PC Address : 00000020
+# PC D: 00000024 
+# Instruction : 384300fc
+# Reg write enable 1
+# Reg 0 write signal 0
+#  - 
+# register 0 0000003f 
+# register 1 00000000 
+# register 2 0000003f 
+# register 3 0000013b 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
+# PC Address : 00000024
+# PC D: 00000028 
+# Instruction : 00221880
+# Reg write enable 1
+# Reg 0 write signal 0
+#  - 
+# register 0 0000003f 
+# register 1 00000000 
+# register 2 0000003f 
+# register 3 0000013b 
+# register 4 00000000 
+# register 5 00000000 
+# register 6 00000000 
+# register 7 00000000 
+# PC Address : 00000028
+# PC D: 0000002c 
+# Instruction : 08221880
+# Reg write enable 1
+# Reg 0 write signal 0
+#  - 
 # FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.

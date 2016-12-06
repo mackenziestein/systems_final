@@ -101,6 +101,8 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
 
    assign SrcB = muxSrcBin;
    assign SrcA = RD1;
+   assign aluSelect = {alu4, alu3, alu2, alu1, alu0};
+   
 
    ALU theALU(SrcA, SrcB, 5'b0, ALUResult);    
    

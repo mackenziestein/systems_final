@@ -1,5 +1,5 @@
 Analysis & Elaboration report for DataPath
-Sun Dec  4 23:21:26 2016
+Mon Dec  5 17:17:09 2016
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -18,11 +18,17 @@ Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
  10. Port Connectivity Checks: "mux2to1B5:muxA3|mux4to1B4:m0"
  11. Port Connectivity Checks: "registerFile:theRegisters|mux4to1B32:mpxA2"
  12. Port Connectivity Checks: "registerFile:theRegisters|mux4to1B32:mpxA1"
- 13. Port Connectivity Checks: "Control:theControl"
- 14. Port Connectivity Checks: "adder:psAdd"
- 15. Port Connectivity Checks: "enabledRegister:PC|mux4to1B32:mux0"
- 16. Port Connectivity Checks: "enabledRegister:PC"
- 17. Analysis & Elaboration Messages
+ 13. Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r7"
+ 14. Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r6"
+ 15. Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r5"
+ 16. Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r4"
+ 17. Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r3"
+ 18. Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r2"
+ 19. Port Connectivity Checks: "Control:theControl"
+ 20. Port Connectivity Checks: "adder:psAdd"
+ 21. Port Connectivity Checks: "enabledRegister:PC|mux4to1B32:mux0"
+ 22. Port Connectivity Checks: "enabledRegister:PC"
+ 23. Analysis & Elaboration Messages
 
 
 
@@ -49,7 +55,7 @@ agreement for further details.
 +----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                             ;
 +-------------------------------+--------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Dec  4 23:21:26 2016      ;
+; Analysis & Elaboration Status ; Successful - Mon Dec  5 17:17:09 2016      ;
 ; Quartus II 64-Bit Version     ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                 ; DataPath                                   ;
 ; Top-level Entity Name         ; DataPath                                   ;
@@ -262,6 +268,60 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-----------+-------+----------+-----------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r7"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r6"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r5"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r4"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r3"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "registerFile:theRegisters|enabledRegister:r2"                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Control:theControl"                                                                         ;
 +--------------+--------+----------+-------------------------------------------------------------------------------------+
@@ -326,9 +386,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Elaboration
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Sun Dec  4 23:21:15 2016
+    Info: Processing started: Mon Dec  5 17:16:56 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DataPath -c DataPath --analysis_and_elaboration
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file instructionMemory2016.sv
+    Info (12023): Found entity 1: instructionMemory
 Info (12021): Found 1 design units, including 1 entities, in source file tester3.sv
     Info (12023): Found entity 1: tester3
 Info (12021): Found 1 design units, including 1 entities, in source file registerFile.sv
@@ -345,8 +407,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux4to1
     Info (12023): Found entity 1: mux4to1B1
 Info (12021): Found 1 design units, including 1 entities, in source file mux2to1B5.sv
     Info (12023): Found entity 1: mux2to1B5
-Info (12021): Found 1 design units, including 1 entities, in source file instructionMemoryTest1.sv
-    Info (12023): Found entity 1: instructionMemory
 Info (12021): Found 1 design units, including 1 entities, in source file enabledRegister.sv
     Info (12023): Found entity 1: enabledRegister
 Info (12021): Found 1 design units, including 1 entities, in source file DataPath.sv
@@ -360,24 +420,26 @@ Info (12021): Found 1 design units, including 1 entities, in source file ALU.sv
 Info (12021): Found 1 design units, including 1 entities, in source file adder.sv
     Info (12023): Found entity 1: adder
 Info (12127): Elaborating entity "DataPath" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at DataPath.sv(97): object "aluSelect" assigned a value but never read
 Info (12128): Elaborating entity "enabledRegister" for hierarchy "enabledRegister:PC"
 Info (12128): Elaborating entity "mux4to1B32" for hierarchy "enabledRegister:PC|mux4to1B32:mux0"
 Info (12128): Elaborating entity "mux4to1B4" for hierarchy "enabledRegister:PC|mux4to1B32:mux0|mux4to1B4:s1"
 Info (12128): Elaborating entity "mux4to1B1" for hierarchy "enabledRegister:PC|mux4to1B32:mux0|mux4to1B4:s1|mux4to1B1:m0"
 Info (12128): Elaborating entity "adder" for hierarchy "adder:psAdd"
 Info (12128): Elaborating entity "instructionMemory" for hierarchy "instructionMemory:imem"
-Warning (10030): Net "instructs.data_a" at instructionMemoryTest1.sv(4) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "instructs.waddr_a" at instructionMemoryTest1.sv(4) has no driver or initial value, using a default initial value '0'
-Warning (10030): Net "instructs.we_a" at instructionMemoryTest1.sv(4) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instructs.data_a" at instructionMemory2016.sv(4) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instructs.waddr_a" at instructionMemory2016.sv(4) has no driver or initial value, using a default initial value '0'
+Warning (10030): Net "instructs.we_a" at instructionMemory2016.sv(4) has no driver or initial value, using a default initial value '0'
 Info (12128): Elaborating entity "Control" for hierarchy "Control:theControl"
 Info (12128): Elaborating entity "registerFile" for hierarchy "registerFile:theRegisters"
 Info (12128): Elaborating entity "mux2to1B5" for hierarchy "mux2to1B5:muxA3"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:theALU"
+Warning (10036): Verilog HDL or VHDL warning at ALU.sv(13): object "add" assigned a value but never read
 Info (12128): Elaborating entity "dataMemory" for hierarchy "dataMemory:data"
-Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 4 warnings
+Info: Quartus II 64-Bit Analysis & Elaboration was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 1389 megabytes
-    Info: Processing ended: Sun Dec  4 23:21:26 2016
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Processing ended: Mon Dec  5 17:17:12 2016
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:32
 
 
