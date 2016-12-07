@@ -11,7 +11,7 @@ module registerFile(input logic [4:0] A1,
 		    );
    
    logic  [0:0] yesWrite0;
-   logic [0:0] 	yesWrite1;
+   logic  [0:0] yesWrite1;
    logic [0:0] 	yesWrite2;
    logic [0:0] 	yesWrite3;
    logic [0:0] 	yesWrite4;
@@ -40,9 +40,9 @@ module registerFile(input logic [4:0] A1,
    enabledRegister r7(WD3,reg7,CLK,yesWrite7);
  
       
-   mux4to1B32 mpxA1(A1[1],A1[0],32'b101010,32'b111111,reg1, reg0, RD1);
+   mux4to1B32 mpxA1(A1[1],A1[0], reg3, reg2, reg1, reg0, RD1);
 
-   mux4to1B32 mpxA2(A2[1],A2[0],32'b101010,32'b111111,reg1, reg0, RD2);
+   mux4to1B32 mpxA2(A2[1],A2[0], reg3, reg2, reg1, reg0, RD2);
 
    
    always @ (negedge CLK)

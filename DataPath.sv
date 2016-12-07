@@ -77,9 +77,12 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    // attach the A1 port to 5 bits of the instruction
 
    logic [31:0]   RD;
-   logic [4:0] 	  A3assign;
- 
-   mux2to1B5 muxA3(regDst, instr[20:16], instr[15:11], A3assign);
+   logic [4:0] 	  RsOrRt, A3assign, r7default;
+
+   assign r7default = 5'b1;
+   
+   mux2to1B5 muxA3(regDst, instr[20:16], instr[15:11], RsOrRt);
+   mux2to1B5 muxJal(jump, RsOrRt, r7default, A3assign);
    
    assign clk = clock;
    assign A1 = instr[25:21];
@@ -113,7 +116,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    dataMemory data(dataA, RD, WD, clk, WE);
 
 
-   mux4to1B32 muxRD(1'b0, memToReg, 32'b0, 32'b0, RD, ALUResult, Result);
+   mux4to1B32 muxRD(jump, memToReg, 32'b0, pcPlus4, RD, ALUResult, Result);
 
    assign WD3 = Result;
    assign WD = RD2;
