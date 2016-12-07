@@ -30,8 +30,24 @@ always @ (negedge clock) begin
    $display("PC Address : %h",pcQ);
    $display("PC D: %h ",pcD);
    $display("Instruction : %h", instruction);
-   $display("Reg write enable %b",regWriteEnable);
+   $display("Reg write enable %b", regWriteEnable);
    $display("Reg 0 write signal %b", dut.theRegisters.yesWrite0);
+   $display("Reg 1 write signal %b", dut.theRegisters.yesWrite1);
+   $display("Reg 2 write signal %b", dut.theRegisters.yesWrite2);
+   $display("Reg 3 write signal %b", dut.theRegisters.yesWrite3);
+   $display("Reg 7 write signal %b", dut.theRegisters.yesWrite7);
+   $display("LW %b", dut.theControl.lw);
+   $display("SW %b", dut.theControl.sw);
+   $display("ALUSrc %b", dut.theControl.ALUSrc);
+   $display("RD2 mux %b", dut.muxRD2.O);
+   $display("ALU Result %b", dut.ALUResult);
+   $display("Mux A3 %b", dut.muxA3.O);
+   $display("muxJal %b", dut.muxJal.O);
+   $display("jump %b", dut.jump);
+   $display("PCJump %b", dut.PCJump);
+   
+   
+   
    
    $display(" - ");
    
