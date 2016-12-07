@@ -24,8 +24,7 @@ begin
    instructs[17] = 32'b001110_00010_00010_00000_00000_001010; // m3: nori $2, $2 , $000a  r2 <-fffffff5
    instructs[18] = 32'b111111_00001_00000_00011_00000_000000; // nonsense instruction
    instructs[19] = 32'b001000_00111_00000_00000_00000_000000; // m2: jr $7   return to first bleu
- 
-
+   
 end
 
 assign read = instructs[addr[6:2]];
