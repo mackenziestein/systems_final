@@ -27,13 +27,13 @@ module Control(ins, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst
    assign alu1 = ins[28];
    assign alu0 = ins[27];
    
-   assign memToReg = 1'b0;
+   assign memToReg = lw;
    assign memWrite = sw;
    assign branchEnable = bleu;
    assign ALUControl = 1'b0;
-   assign ALUSrc = nori;
+   assign ALUSrc = nori | lw | sw;
    assign regDst = andr | norr | nori | notr | rolv | rorv;
-   assign regWriteEnable = lw | andr | norr | nori | notr | rolv | rorv | jal;   
+   assign regWriteEnable = lw | andr | norr | nori | notr | rolv | rorv | jal;  
    assign jump = jr | jal;
    
    endmodule
