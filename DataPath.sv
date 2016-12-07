@@ -97,17 +97,17 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    assign SignImm = {{16{instr[15]}}, instr[15:0]};
 
    logic [31:0]        SrcA, SrcB, ALUResult;
-   logic [4:0] 	       aluSelect;
+   // logic [4:0] 	       aluSelect;
    logic [31:0]        muxSrcBin, Result, WD, dataA;
    
    mux4to1B32 muxRD2(1'b0, ALUSrc, 32'b0, 32'b0, SignImm, RD2, muxSrcBin);
 
    assign SrcB = muxSrcBin;
    assign SrcA = RD1;
-   assign aluSelect = {alu4, alu3, alu2, alu1, alu0};
+   // assign aluSelect = {alu4, alu3, alu2, alu1, alu0};
    
 
-   ALU theALU(SrcA, SrcB, 5'b0, ALUResult);    
+   ALU theALU(SrcA, SrcB, aluControl, ALUResult);    
    
    logic [0:0] 	       WE;
 
