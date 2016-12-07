@@ -1,5 +1,5 @@
 # vsim -lib work -c tester3 
-# Start time: 16:49:22 on Dec 05,2016
+# Start time: 01:25:24 on Dec 07,2016
 # Loading sv_std.std
 # Loading work.tester3
 # Loading work.DataPath
@@ -14,159 +14,561 @@
 # Loading work.mux2to1B5
 # Loading work.ALU
 # Loading work.dataMemory
-# register 0 00000000 
-# register 1 00000000 
-# register 2 00000000 
-# register 3 00000000 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0          0 
+# register 1          0 
+# register 2          0 
+# register 3          0 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 00000000
 # PC D: 00000004 
 # Instruction : 8c010008
 # Reg write enable 1
-# Reg 0 write signal 1
+# Reg 0 write signal 0
+# Reg 1 write signal 1
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000001000
+# ALU Result 00000000000000000000000000001000
+# Mux A3 00001
+# muxJal 00001
+# jump 0
+# PCJump 00000000000001000000000000100000
 #  - 
-# register 0 00000000 
-# register 1 00000000 
-# register 2 00000000 
-# register 3 00000000 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0          0 
+# register 1         15 
+# register 2          0 
+# register 3          0 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 00000004
 # PC D: 00000008 
 # Instruction : ac010010
 # Reg write enable 0
 # Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 0
+# SW 1
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000010000
+# ALU Result 00000000000000000000000000010000
+# Mux A3 00001
+# muxJal 00001
+# jump 0
+# PCJump 00000000000001000000000001000000
 #  - 
-# Writing address          0 with          0
-# register 0 00000000 
-# register 1 00000000 
-# register 2 00000000 
-# register 3 00000000 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# Writing address         16 with         15
+# theStuff 3         99
+# theStuff 4         99
+# register 0          0 
+# register 1         15 
+# register 2          0 
+# register 3          0 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 00000008
 # PC D: 0000000c 
 # Instruction : 8c200001
 # Reg write enable 1
 # Reg 0 write signal 1
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000000001
+# ALU Result 00000000000000000000000000010000
+# Mux A3 00000
+# muxJal 00000
+# jump 0
+# PCJump 00000000100000000000000000000100
 #  - 
-# register 0 00000000 
-# register 1 00000000 
-# register 2 00000000 
-# register 3 00000000 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0         15 
+# register 1         15 
+# register 2          0 
+# register 3          0 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 0000000c
 # PC D: 00000010 
 # Instruction : 8c200005
 # Reg write enable 1
 # Reg 0 write signal 1
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000000101
+# ALU Result 00000000000000000000000000010100
+# Mux A3 00000
+# muxJal 00000
+# jump 0
+# PCJump 00000000100000000000000000010100
 #  - 
-# register 0 00000000 
-# register 1 00000000 
-# register 2 00000000 
-# register 3 00000000 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0          0 
+# register 1         15 
+# register 2          0 
+# register 3          0 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 00000010
 # PC D: 00000014 
 # Instruction : 8c010000
 # Reg write enable 1
-# Reg 0 write signal 1
+# Reg 0 write signal 0
+# Reg 1 write signal 1
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000000000
+# ALU Result 00000000000000000000000000000000
+# Mux A3 00001
+# muxJal 00001
+# jump 0
+# PCJump 00000000000001000000000000000000
 #  - 
-# register 0 00000000 
-# register 1 00000000 
-# register 2 00000000 
-# register 3 00000000 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0          0 
+# register 1         12 
+# register 2          0 
+# register 3          0 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 00000014
 # PC D: 00000018 
 # Instruction : 8c020004
 # Reg write enable 1
-# Reg 0 write signal 1
+# Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 1
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000000100
+# ALU Result 00000000000000000000000000000100
+# Mux A3 00010
+# muxJal 00010
+# jump 0
+# PCJump 00000000000010000000000000010000
 #  - 
-# register 0 0000003f 
-# register 1 00000000 
-# register 2 00000000 
-# register 3 00000000 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3          0 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 00000018
 # PC D: 0000001c 
 # Instruction : 80221800
 # Reg write enable 1
 # Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 1
+# Reg 7 write signal 0
+# LW 0
+# SW 0
+# ALUSrc 0
+# RD2 mux 00000000000000000000000000001010
+# ALU Result 00000000000000000000000000010110
+# Mux A3 00011
+# muxJal 00011
+# jump 0
+# PCJump 00000000100010000110000000000000
 #  - 
-# register 0 0000003f 
-# register 1 00000000 
-# register 2 0000003f 
-# register 3 00000000 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 0000001c
 # PC D: 00000020 
-# Instruction : 98221800
+# Instruction : 80221800
 # Reg write enable 1
 # Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 1
+# Reg 7 write signal 0
+# LW 0
+# SW 0
+# ALUSrc 0
+# RD2 mux 00000000000000000000000000001010
+# ALU Result 00000000000000000000000000010110
+# Mux A3 00011
+# muxJal 00011
+# jump 0
+# PCJump 00000000100010000110000000000000
 #  - 
-# register 0 0000003f 
-# register 1 00000000 
-# register 2 0000003f 
-# register 3 00000000 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 00000020
 # PC D: 00000024 
-# Instruction : 384300fc
+# Instruction : 80221800
 # Reg write enable 1
 # Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 1
+# Reg 7 write signal 0
+# LW 0
+# SW 0
+# ALUSrc 0
+# RD2 mux 00000000000000000000000000001010
+# ALU Result 00000000000000000000000000010110
+# Mux A3 00011
+# muxJal 00011
+# jump 0
+# PCJump 00000000100010000110000000000000
 #  - 
-# register 0 0000003f 
-# register 1 00000000 
-# register 2 0000003f 
-# register 3 0000013b 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 00000024
 # PC D: 00000028 
-# Instruction : 00221880
+# Instruction : 80221800
 # Reg write enable 1
 # Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 1
+# Reg 7 write signal 0
+# LW 0
+# SW 0
+# ALUSrc 0
+# RD2 mux 00000000000000000000000000001010
+# ALU Result 00000000000000000000000000010110
+# Mux A3 00011
+# muxJal 00011
+# jump 0
+# PCJump 00000000100010000110000000000000
 #  - 
-# register 0 0000003f 
-# register 1 00000000 
-# register 2 0000003f 
-# register 3 0000013b 
-# register 4 00000000 
-# register 5 00000000 
-# register 6 00000000 
-# register 7 00000000 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
 # PC Address : 00000028
 # PC D: 0000002c 
-# Instruction : 08221880
+# Instruction : 80221800
 # Reg write enable 1
 # Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 1
+# Reg 7 write signal 0
+# LW 0
+# SW 0
+# ALUSrc 0
+# RD2 mux 00000000000000000000000000001010
+# ALU Result 00000000000000000000000000010110
+# Mux A3 00011
+# muxJal 00011
+# jump 0
+# PCJump 00000000100010000110000000000000
 #  - 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
+# PC Address : 0000002c
+# PC D: 00000030 
+# Instruction : 80221800
+# Reg write enable 1
+# Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 1
+# Reg 7 write signal 0
+# LW 0
+# SW 0
+# ALUSrc 0
+# RD2 mux 00000000000000000000000000001010
+# ALU Result 00000000000000000000000000010110
+# Mux A3 00011
+# muxJal 00011
+# jump 0
+# PCJump 00000000100010000110000000000000
+#  - 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec          0 
+# register 7 bin 00000000000000000000000000000000 
+# register 7 hex 00000000 
+# PC Address : 00000030
+# PC D: 00000048 
+# Instruction : 0c000012
+# Reg write enable 1
+# Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 1
+# LW 0
+# SW 0
+# ALUSrc 0
+# RD2 mux 00000000000000000000000000000000
+# ALU Result 00000000000000000000000000000000
+# Mux A3 00000
+# muxJal 11111
+# jump 1
+# PCJump 00000000000000000000000001001000
+#  - 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec         52 
+# register 7 bin 00000000000000000000000000110100 
+# register 7 hex 00000034 
+# PC Address : 00000048
+# PC D: 03800000 
+# Instruction : 20e00000
+# Reg write enable 0
+# Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 0
+# SW 0
+# ALUSrc 0
+# RD2 mux 00000000000000000000000000000000
+# ALU Result 00000000000000000000000000010110
+# Mux A3 00000
+# muxJal 11111
+# jump 1
+# PCJump 00000011100000000000000000000000
+#  - 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec         52 
+# register 7 bin 00000000000000000000000000110100 
+# register 7 hex 00000034 
+# PC Address : 03800000
+# PC D: 03800004 
+# Instruction : 8c010008
+# Reg write enable 1
+# Reg 0 write signal 0
+# Reg 1 write signal 1
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000001000
+# ALU Result 00000000000000000000000000001000
+# Mux A3 00001
+# muxJal 00001
+# jump 0
+# PCJump 00000000000001000000000000100000
+#  - 
+# register 0          0 
+# register 1         15 
+# register 2         10 
+# register 3         22 
+# register 7 dec         52 
+# register 7 bin 00000000000000000000000000110100 
+# register 7 hex 00000034 
+# PC Address : 03800004
+# PC D: 03800008 
+# Instruction : ac010010
+# Reg write enable 0
+# Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 0
+# SW 1
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000010000
+# ALU Result 00000000000000000000000000010000
+# Mux A3 00001
+# muxJal 00001
+# jump 0
+# PCJump 00000000000001000000000001000000
+#  - 
+# Writing address         16 with         15
+# theStuff 3         99
+# theStuff 4         15
+# register 0          0 
+# register 1         15 
+# register 2         10 
+# register 3         22 
+# register 7 dec         52 
+# register 7 bin 00000000000000000000000000110100 
+# register 7 hex 00000034 
+# PC Address : 03800008
+# PC D: 0380000c 
+# Instruction : 8c200001
+# Reg write enable 1
+# Reg 0 write signal 1
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000000001
+# ALU Result 00000000000000000000000000010000
+# Mux A3 00000
+# muxJal 00000
+# jump 0
+# PCJump 00000000100000000000000000000100
+#  - 
+# register 0         15 
+# register 1         15 
+# register 2         10 
+# register 3         22 
+# register 7 dec         52 
+# register 7 bin 00000000000000000000000000110100 
+# register 7 hex 00000034 
+# PC Address : 0380000c
+# PC D: 03800010 
+# Instruction : 8c200005
+# Reg write enable 1
+# Reg 0 write signal 1
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000000101
+# ALU Result 00000000000000000000000000010100
+# Mux A3 00000
+# muxJal 00000
+# jump 0
+# PCJump 00000000100000000000000000010100
+#  - 
+# register 0          0 
+# register 1         15 
+# register 2         10 
+# register 3         22 
+# register 7 dec         52 
+# register 7 bin 00000000000000000000000000110100 
+# register 7 hex 00000034 
+# PC Address : 03800010
+# PC D: 03800014 
+# Instruction : 8c010000
+# Reg write enable 1
+# Reg 0 write signal 0
+# Reg 1 write signal 1
+# Reg 2 write signal 0
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000000000
+# ALU Result 00000000000000000000000000000000
+# Mux A3 00001
+# muxJal 00001
+# jump 0
+# PCJump 00000000000001000000000000000000
+#  - 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec         52 
+# register 7 bin 00000000000000000000000000110100 
+# register 7 hex 00000034 
+# PC Address : 03800014
+# PC D: 03800018 
+# Instruction : 8c020004
+# Reg write enable 1
+# Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 1
+# Reg 3 write signal 0
+# Reg 7 write signal 0
+# LW 1
+# SW 0
+# ALUSrc 1
+# RD2 mux 00000000000000000000000000000100
+# ALU Result 00000000000000000000000000000100
+# Mux A3 00010
+# muxJal 00010
+# jump 0
+# PCJump 00000000000010000000000000010000
+#  - 
+# register 0          0 
+# register 1         12 
+# register 2         10 
+# register 3         22 
+# register 7 dec         52 
+# register 7 bin 00000000000000000000000000110100 
+# register 7 hex 00000034 
+# PC Address : 03800018
+# PC D: 0380001c 
+# Instruction : 80221800
+# Reg write enable 1
+# Reg 0 write signal 0
+# Reg 1 write signal 0
+# Reg 2 write signal 0
+# Reg 3 write signal 1
+# Reg 7 write signal 0
+# LW 0
+# SW 0
+# ALUSrc 0
+# RD2 mux 00000000000000000000000000001010
+# ALU Result 00000000000000000000000000010110
+# Mux A3 00011
+# muxJal 00011
+# jump 0
+# PCJump 00000000100010000110000000000000
+#  - 
+# Simulation ending after          20 clock cycles 
+# ** Note: $stop    : tester3.sv(58)
+#    Time: 800 ns  Iteration: 1  Instance: /tester3
+# Break in Module tester3 at tester3.sv line 58
+# Stopped at tester3.sv line 58
 # FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
