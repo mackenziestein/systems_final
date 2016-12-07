@@ -58,7 +58,9 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    // it will have many more ports later
 
 
-   logic [0:0] 	memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, jump, alu4, alu3, alu2, alu1, alu0;
+   logic [0:0] 	memToReg, memWrite, branchEnable, ALUSrc, regDst, jump, alu4, alu3, alu2, alu1, alu0;
+   logic [4:0] 	ALUControl;
+   
    
    
    Control theControl(instr, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, regWriteEnable, jump, alu4, alu3, alu2, alu1, alu0);
@@ -107,7 +109,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    // assign aluSelect = {alu4, alu3, alu2, alu1, alu0};
    
 
-   ALU theALU(SrcA, SrcB, aluControl, ALUResult);    
+   ALU theALU(SrcA, SrcB, ALUControl, ALUResult);    
    
    logic [0:0] 	       WE;
 

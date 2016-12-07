@@ -26,7 +26,9 @@ module ALU(input logic  [31:0] I1,
    // rorv = 00001
      
    
-   assign add = Selector[4] & ~Selector[3] & ~Selector[2] & ~Selector[1] & ~Selector[0];
+   assign add = (Selector[4] & ~Selector[3] & ~Selector[2] & ~Selector[1] & ~Selector[0]) | 
+		(Selector[4] & ~Selector[3] & ~Selector[2] & ~Selector[1] & Selector[0]) |
+		(Selector[4] & ~Selector[3] & Selector[2] & ~Selector[1] & Selector[0]);
    assign norr = Selector[4] & ~Selector[3] & ~Selector[2] & Selector[1] & Selector[0];
    assign nori = ~Selector[4] & ~Selector[3] & Selector[2] & Selector[1] & Selector[0];
    assign chooseFirst = add | norr | nori;
@@ -81,7 +83,8 @@ module ALU(input logic  [31:0] I1,
    
 
    
-   mux8to1B32 first(add, norr, nori, 32'b0, 32'b0, 32'b0, addOut, 32'b0, norOut, norIOut, 32'b0, firstOut);
+   //mux8to1B32 first(add, norr, nori, 32'b0, 32'b11110000, 32'b11001100, sumOut, 32'b11111111, norOut, norIOut, 32'b10101010, firstOut);
+   mux8to1B32 first(add, norr, nori, 32'b0, 32'b0, 32'b0, sumOut, 32'b0, norOut, norIOut, 32'b0, firstOut);
    mux4to1B32 second(notr, bleu, 32'b0, notOut, bleuOut, 32'b0, secondOut);
    mux4to1B32 third(rolv, rorv, 32'b0, rotRight, rotLeft, 32'b0, thirdOut);
 

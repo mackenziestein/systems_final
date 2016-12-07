@@ -36,15 +36,15 @@ always @ (negedge clock) begin
    $display("Reg 2 write signal %b", dut.theRegisters.yesWrite2);
    $display("Reg 3 write signal %b", dut.theRegisters.yesWrite3);
    $display("Reg 7 write signal %b", dut.theRegisters.yesWrite7);
-   $display("LW %b", dut.theControl.lw);
-   $display("SW %b", dut.theControl.sw);
    $display("ALUSrc %b", dut.theControl.ALUSrc);
    $display("RD2 mux %b", dut.muxRD2.O);
    $display("ALU Result %b", dut.ALUResult);
-   $display("Mux A3 %b", dut.muxA3.O);
-   $display("muxJal %b", dut.muxJal.O);
-   $display("jump %b", dut.jump);
    $display("PCJump %b", dut.PCJump);
+   $display("add %b", dut.theALU.add);
+   
+   $display("first out %b", dut.theALU.firstOut);
+   $display("second out %b", dut.theALU.secondOut);
+   $display("third out %b", dut.theALU.thirdOut);
    
    
    
