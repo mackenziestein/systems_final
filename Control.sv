@@ -17,9 +17,7 @@ module Control(ins, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst
    assign norr = ins[31] & ~ins[30] & ~ins[29] & ins[28] & ins[27] & ~ins[26];
    assign nori = ~ins[31] & ~ins[30] & ins[29] & ins[28] & ins[27] & ~ins[26];
    assign notr = ~ins[31] & ~ins[30] & ~ins[29] & ins[28] & ~ins[27] & ~ins[26];
-   // pseudoinstruction - actually nor
    assign bleu = ~ins[31] & ins[30] & ~ins[29] & ~ins[28] & ~ins[27] & ~ins[26];
-   // evaluate rs <= rt, then jump to label
    assign rolv = ~ins[31] & ~ins[30] & ~ins[29] & ~ins[28] & ~ins[27] & ~ins[26];
    assign rorv = ~ins[31] & ~ins[30] & ~ins[29] & ~ins[28] & ins[27] & ~ins[26];
 	    
@@ -40,4 +38,4 @@ module Control(ins, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst
    assign jumpReg = jr;
    
    
-   endmodule
+endmodule

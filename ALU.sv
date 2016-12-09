@@ -16,37 +16,25 @@ module ALU(input logic  [31:0] I1,
    logic [0:0] 	chooseFirst, chooseSecond, chooseThird;
    logic [31:0] firstOut, secondOut, thirdOut, finalOut;
    
- 
-   // add = 10000
-   // nor = 10011
-   // nori = 00111
-   // not = 00010
-   // bleu = 01000
-   // rolv = 00000
-   // rorv = 00001
-     
-   
+   // assign 0 or 1 to each function logic based on Selector
    assign add = (Selector[4] & ~Selector[3] & ~Selector[2] & ~Selector[1] & ~Selector[0]) | 
 		(Selector[4] & ~Selector[3] & ~Selector[2] & ~Selector[1] & Selector[0]) |
 		(Selector[4] & ~Selector[3] & Selector[2] & ~Selector[1] & Selector[0]);
    assign norr = Selector[4] & ~Selector[3] & ~Selector[2] & Selector[1] & Selector[0];
    assign nori = ~Selector[4] & ~Selector[3] & Selector[2] & Selector[1] & Selector[0];
-   assign chooseFirst = add | norr | nori;
-   
    assign notr = ~Selector[4] & ~Selector[3] & ~Selector[2] & Selector[1] & ~Selector[0];   
    assign bleu = ~Selector[4] & Selector[3] & ~Selector[2] & ~Selector[1] & ~Selector[0];
-   assign chooseSecond = notr | bleu;
-   
    assign rolv = ~Selector[4] & ~Selector[3] & ~Selector[2] & ~Selector[1] & ~Selector[0];
    assign rorv = ~Selector[4] & ~Selector[3] & ~Selector[2] & ~Selector[1] & Selector[0];
+
+   // assign 0 or 1 to each choose line, to be used as control lines in muxes
+   assign chooseFirst = add | norr | nori;
+   assign chooseSecond = notr | bleu;
    assign chooseThird = rolv | rorv;
    
    // ADDITION - for add, lw, sw
    assign sumOut = I1 + I2;
-   //assign sumOut = 32'b111;
    
-   // also need: nor, nori (same as nor?), not (nor w 0), ?? for rotations
-
    // ROTATE RIGHT
    assign Rrot0 = I2;
    assign Rrot1 = {I2[0:0], I2[31:1]};
@@ -56,7 +44,7 @@ module ALU(input logic  [31:0] I1,
    assign Rrot5 = {I2[4:0], I2[31:5]};
    assign Rrot6 = {I2[5:0], I2[31:6]};
    assign Rrot7 = {I2[6:0], I2[31:7]};
-
+   // choose how far to rotate based on Rs
    mux8to1B32 rotateRight(I1[2], I1[1], I1[0], Rrot7, Rrot6, Rrot5, Rrot4, Rrot3, Rrot2, Rrot1, Rrot0, rotRight);
 
    // ROTATE LEFT
@@ -68,7 +56,7 @@ module ALU(input logic  [31:0] I1,
    assign Lrot5 = {I2[26:0], I2[31:27]};
    assign Lrot6 = {I2[25:0], I2[31:26]};
    assign Lrot7 = {I2[24:0], I2[31:25]};
-
+   // choose how far to rotate based on Rs
    mux8to1B32 rotateLeft(I1[2], I1[1], I1[0], Lrot7, Lrot6, Lrot5, Lrot4, Lrot3, Lrot2, Lrot1, Lrot0, rotLeft);
 
    // NOR
@@ -81,23 +69,17 @@ module ALU(input logic  [31:0] I1,
    assign notOut = ~I2;
 
    // BLEU
-
-   //if I1 is less than or equal to I2 -->  Branch
+   // if bleuOut has 1 in most significant bit, I1 <= I2 - used in mux in datapath
    assign bleuOut = I1-I2;
-   
 
-   
-   //mux8to1B32 first(add, norr, nori, 32'b0, 32'b11110000, 32'b11001100, sumOut, 32'b11111111, norOut, norIOut, 32'b10101010, firstOut);
+   // select which output to use, based on control signals
    mux8to1B32 first(add, norr, nori, 32'b0, 32'b0, 32'b0, sumOut, 32'b0, norOut, norIOut, 32'b0, firstOut);
    mux4to1B32 second(notr, bleu, 32'b0, notOut, bleuOut, 32'b0, secondOut);
    mux4to1B32 third(rolv, rorv, 32'b0, rotLeft, rotRight, 32'b0, thirdOut);
 
-   //assign chooseThird = 1'b0;
-   
-   
+   // choose correct final output
    mux8to1B32 muxFinal(chooseThird, chooseSecond, chooseFirst, 32'b0, 32'b0, 32'b0, thirdOut, 32'b0, secondOut, firstOut, 32'b0, finalOut);
 
    assign O = finalOut;
-   
 	
 endmodule
