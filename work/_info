@@ -10,7 +10,7 @@ cModel Technology
 Z0 d/home/class19/mstein19/cs161/DataPath
 vadder
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1481245863
+Z2 !s110 1481249107
 !i10b 1
 !s100 ?OPS[<eAO@3D`4HUBld]Q3
 Ig_A_[@PXRMB<;lHRF9cJQ2
@@ -26,7 +26,7 @@ Z5 OV;L;10.3d;59
 r1
 !s85 0
 31
-Z6 !s108 1481245863.910290
+Z6 !s108 1481249107.301673
 Z7 !s107 tester3.sv|registerFile.sv|mux8to1B32.sv|mux4to1B8.sv|mux4to1B5.sv|mux4to1B4.sv|mux4to1B32.sv|mux4to1B1.sv|mux2to1B5.sv|instructionMemory2016.sv|enabledRegister.sv|DataPath.sv|dataMemory.sv|Control.sv|ALU.sv|adder.sv|
 Z8 !s90 adder.sv|ALU.sv|Control.sv|dataMemory.sv|DataPath.sv|enabledRegister.sv|instructionMemory2016.sv|mux2to1B5.sv|mux4to1B1.sv|mux4to1B32.sv|mux4to1B4.sv|mux4to1B5.sv|mux4to1B8.sv|mux8to1B32.sv|registerFile.sv|tester3.sv|
 !i113 1
@@ -57,13 +57,13 @@ vControl
 R1
 R2
 !i10b 1
-!s100 G:iHAXj:U??nXNd4bhhC01
-I7_d16_bDYkRV_C=45GlMA3
+!s100 KaaWIB;1l:PRdFo3UP9Wn3
+I^Tb_fC>afA9_;o_e7b=SD2
 R3
 !s105 Control_sv_unit
 S1
 R0
-w1481244018
+w1481248249
 8Control.sv
 FControl.sv
 L0 1
@@ -103,13 +103,13 @@ vDataPath
 R1
 R2
 !i10b 1
-!s100 FdRAGRcjb9HKzc5JC3Nd41
-I66<6H:D;5C?WLehOLHAoQ2
+!s100 ;zC@6GaOYEL:92JfncaBQ3
+Ide><X:Gd]29ZkSP0Q^=6Z2
 R3
 !s105 DataPath_sv_unit
 S1
 R0
-w1481098097
+w1481248478
 8DataPath.sv
 FDataPath.sv
 L0 1
@@ -333,13 +333,13 @@ vregisterFile
 R1
 R2
 !i10b 1
-!s100 fkTYBBGgH[F2^OdCmFn<53
-I6?z<YE0<eg0L]2o[Q<dzZ2
+!s100 [J<P<?zKRcV^z]T9?LTI63
+IoU0[TJ=m1am92=kk6HZDT3
 R3
 !s105 registerFile_sv_unit
 S1
 R0
-w1481244922
+w1481249102
 8registerFile.sv
 FregisterFile.sv
 L0 3
@@ -356,13 +356,13 @@ vtester3
 R1
 R2
 !i10b 1
-!s100 `DYS3lj:IW=]kX;HZG[gJ3
-I0i[2ih@[5bzz1gH[dR6T@0
+!s100 OgG2DQQI`FDbj0gi?KQ><3
+IeEajHd<M]_Sl0oJ9kad?F3
 R3
 !s105 tester3_sv_unit
 S1
 R0
-w1481233281
+w1481248598
 8tester3.sv
 Ftester3.sv
 L0 3
