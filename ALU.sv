@@ -81,7 +81,9 @@ module ALU(input logic  [31:0] I1,
    assign notOut = ~I2;
 
    // BLEU
-   assign bleuOut = 32'b0;
+
+   //if I1 is less than or equal to I2 -->  Branch
+   assign bleuOut = I1-I2;
    
 
    

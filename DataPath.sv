@@ -98,7 +98,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    assign SignImm = {{16{instr[15]}}, instr[15:0]};
 
 
-   logic [31:0]        signImm22, ps4AdderIn, branchAdderOut;
+   logic [31:0]        signImm22, pc4AdderIn, branchAdderOut, PCBranch;
    logic [1:0] 	       constant0;
    
    assign constant0 = 2'b0;
@@ -106,20 +106,20 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    adder branchAdd(signImm22, pc4AdderIn, branchAdderOut);
    
    assign signImm22 = {SignImm[29:0], constant0};
-   assign pc4AdderIn = PCPlus;
-   assign PCBranch = adderOut;
+   assign pc4AdderIn = pcPlus4;
+   assign PCBranch = branchAdderOut;
 
 
    
    logic [31:0]        SrcA, SrcB, ALUResult;
    // logic [4:0] 	       aluSelect;
-   logic [31:0]        muxSrcBin, Result, WD, dataA;
+   logic [31:0]        muxSrcBin, Result, WD, dataA, muxBranchOut;
    
    mux4to1B32 muxRD2(1'b0, ALUSrc, 32'b0, 32'b0, SignImm, RD2, muxSrcBin);
 
    assign SrcB = muxSrcBin;
    assign SrcA = RD1;
-   // assign aluSelect = {alu4, alu3, alu2, alu1, alu0};
+   // assign aluSelect = {alu4, alu3, alu2, alu1, alu0}; 
    
 
    ALU theALU(SrcA, SrcB, ALUControl, ALUResult);    
@@ -138,13 +138,15 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    assign WD = RD2;
    assign WE = memWrite;
 
+   mux4to1B32 muxBranch(1'b0, PCBranch[31], 32'b0, 32'b0, SignImm, pcPlus4, muxBranchOut);
+
    logic [31:0]        PCJump, jumpInst, PCNext, PCJumpReg;
  
    //assign jumpInst = {instr[29:0], constant0[1:0]};
    assign PCJump = {pcQ[31:28], instr[25:0], constant0[1:0]};
    assign PCJumpReg = RD1;
    
-   mux8to1B32 muxPC(branchEnable, jump, jumpReg, 32'b0, 32'b0, 32'b0, PCBranch, PCJumpReg, PCJump, 32'b0, pcPlus4, PCNext);
+   mux8to1B32 muxPC(branchEnable, jump, jumpReg, 32'b0, 32'b0, 32'b0, muxBranchOut, PCJumpReg, PCJump, 32'b0, pcPlus4, PCNext);
    
    //mux4to1B32 jumpPC(1'b0, jump, 32'b0, 32'b0, PCJump, pcPlus4, PCNext);
    assign pcD = PCNext;
