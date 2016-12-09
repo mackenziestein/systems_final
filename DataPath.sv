@@ -9,7 +9,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    output logic [31:0] pcQ;
    output logic [31:0] pcD;
    output logic [0:0]  regWriteEnable;
-   logic [31:0]        pcPlus4; constant4;
+   logic [31:0]        pcPlus4, constant4;
    
    enabledRegister PC(pcD,pcQ,clock,1'b1);
 
