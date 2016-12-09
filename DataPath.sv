@@ -113,6 +113,26 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    mux8to1B32 muxPC(branchEnable, jump, jumpReg, 32'b0, 32'b0, 32'b0, muxBranchOut, PCJumpReg, PCJump, 32'b0, pcPlus4, PCNext);
    
    assign pcD = PCNext;
-   
+
+
+always @ (negedge clock) begin
+   $display("CONTROL SIGNALS");
+   $display("Mem to reg enable : %b", memToReg);
+   $display("Mem write enable  : %b", memWrite);
+   $display("Branch enable : %b", branchEnable);
+   $display("ALUControl : %b", ALUControl);
+   $display("ALUSrc : %b", ALUSrc);
+   $display("Reg Dst : %b", regDst);
+   $display("Jump enable : %b", jump);
+   $display("Jump register enable : %b", jumpReg);
+   $display("Reg 0 write signal %b", theRegisters.yesWrite0);
+   $display("Reg 1 write signal %b", theRegisters.yesWrite1);
+   $display("Reg 2 write signal %b", theRegisters.yesWrite2);
+   $display("Reg 3 write signal %b", theRegisters.yesWrite3);
+   $display("Reg 4 write signal %b", theRegisters.yesWrite3);
+   $display("Reg 5 write signal %b", theRegisters.yesWrite3);
+   $display("Reg 6 write signal %b", theRegisters.yesWrite3);
+   $display("Reg 7 write signal %b", theRegisters.yesWrite7);
+end // always
    
 endmodule

@@ -7,67 +7,34 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-d/home/class19/mstein19/cs161/DataPath
-vadder
-Z0 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z1 !s110 1481255445
-!i10b 1
-!s100 ?OPS[<eAO@3D`4HUBld]Q3
-Ig_A_[@PXRMB<;lHRF9cJQ2
-Z2 V`JN@9S9cnhjKRR_L]QIcM3
-!s105 adder_sv_unit
-S1
-Z3 d/home/class19/lschmidlein19/cs161
-w1480700518
-8adder.sv
-Fadder.sv
-L0 5
-Z4 OV;L;10.3d;59
-r1
-!s85 0
-31
+Z0 d/home/class19/mstein19/cs161/DataPath
+<<<<<<< HEAD
+Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
+Z2 w1481250100
+Z3 =======
+Z4 d/home/class19/lschmidlein19/cs161
+w1481250136
+<<<<<<< HEAD
+!s108 1481250116.526648
+!s107 tester3.sv|registerFile.sv|mux8to1B32.sv|mux4to1B8.sv|mux4to1B5.sv|mux4to1B4.sv|mux4to1B32.sv|mux4to1B1.sv|mux2to1B5.sv|instructionMemory2016.sv|enabledRegister.sv|DataPath.sv|dataMemory.sv|Control.sv|ALU.sv|adder.sv|
+!s90 adder.sv|ALU.sv|Control.sv|dataMemory.sv|DataPath.sv|enabledRegister.sv|instructionMemory2016.sv|mux2to1B5.sv|mux4to1B1.sv|mux4to1B32.sv|mux4to1B4.sv|mux4to1B5.sv|mux4to1B8.sv|mux8to1B32.sv|registerFile.sv|tester3.sv|
+R3
 Z5 !s108 1481255445.632653
 Z6 !s107 tester3.sv|registerFile.sv|mux8to1B32.sv|mux4to1B8.sv|mux4to1B5.sv|mux4to1B4.sv|mux4to1B32.sv|mux4to1B1.sv|mux2to1B5.sv|instructionMemoryTest1.sv|instructionMemory2016.sv|enabledRegister.sv|DataPath.sv|dataMemory.sv|Control.sv|ALU.sv|adder.sv|
 Z7 !s90 adder.sv|ALU.sv|Control.sv|dataMemory.sv|DataPath.sv|enabledRegister.sv|instructionMemory2016.sv|instructionMemoryTest1.sv|mux2to1B5.sv|mux4to1B1.sv|mux4to1B32.sv|mux4to1B4.sv|mux4to1B5.sv|mux4to1B8.sv|mux8to1B32.sv|registerFile.sv|tester3.sv|
-!i113 1
-vALU
 R0
+<<<<<<< HEAD
 R1
-!i10b 1
-!s100 <jnkP6c?hNP;:f<UfCd^20
-IUik[OJD5DA_B328>ZSoDm1
-R2
-!s105 ALU_sv_unit
-S1
+!s110 1481250116
 R3
-w1481254293
-8ALU.sv
-FALU.sv
-L0 5
-R4
-r1
-!s85 0
-31
-R5
-R6
-R7
-!i113 1
-n@a@l@u
-vControl
+R1
+!s110 1481255445
 R0
-R1
-!i10b 1
-!s100 KaaWIB;1l:PRdFo3UP9Wn3
-I^Tb_fC>afA9_;o_e7b=SD2
-R2
-!s105 Control_sv_unit
-S1
-R3
-Z8 w1481250136
-8Control.sv
-FControl.sv
+>>>>>>> cb8a342292a916c8bf70f4706e4497c7d6bb1a95
+Z8 8Control.sv
+Z9 FControl.sv
 L0 1
-R4
+Z10 OV;L;10.3d;59
 r1
 !s85 0
 31
@@ -76,301 +43,388 @@ R6
 R7
 !i113 1
 n@control
-vdataMemory
 R0
-R1
+>>>>>>> cb8a342292a916c8bf70f4706e4497c7d6bb1a95
+!i113 1
+R0
+>>>>>>> cb8a342292a916c8bf70f4706e4497c7d6bb1a95
 !i10b 1
-!s100 n>O>N]IKma1G9i<<6JWGJ1
-IDD;g;MZ6jWMAV8CcTR=He1
-R2
-!s105 dataMemory_sv_unit
+Z11 !s100 ?OPS[<eAO@3D`4HUBld]Q3
+Z12 Ig_A_[@PXRMB<;lHRF9cJQ2
+Z13 V`JN@9S9cnhjKRR_L]QIcM3
+Z14 !s105 adder_sv_unit
 S1
-R3
-w1481092724
-8dataMemory.sv
-FdataMemory.sv
-L0 3
 R4
+w1480700518
+Z15 8adder.sv
+Z16 Fadder.sv
+L0 5
+R10
 r1
 !s85 0
 31
-R5
+vadder
+R1
+Z17 !s110 1481257370
+!i10b 1
+R11
+R12
+R13
+R14
+S1
+R0
+Z18 w1480286834
+R15
+R16
+L0 5
+R10
+r1
+!s85 0
+31
+Z19 !s108 1481257370.485959
+R6
+R7
+!i113 1
+vALU
+R1
+R17
+!i10b 1
+!s100 <jnkP6c?hNP;:f<UfCd^20
+IUik[OJD5DA_B328>ZSoDm1
+R13
+!s105 ALU_sv_unit
+S1
+R0
+w1481256052
+8ALU.sv
+FALU.sv
+L0 5
+R10
+r1
+!s85 0
+31
+R19
+R6
+R7
+!i113 1
+n@a@l@u
+vControl
+R1
+R17
+!i10b 1
+!s100 KaaWIB;1l:PRdFo3UP9Wn3
+I^Tb_fC>afA9_;o_e7b=SD2
+R13
+!s105 Control_sv_unit
+S1
+R0
+R2
+R8
+R9
+L0 1
+R10
+r1
+!s85 0
+31
+R19
+R6
+R7
+!i113 1
+vdataMemory
+R1
+R17
+!i10b 1
+!s100 g1?kB[S3g_RA>JTKeNQZz3
+Id^]0E6>Fg@7CmNjPZha8L3
+R13
+!s105 dataMemory_sv_unit
+S1
+R0
+w1481257284
+8dataMemory.sv
+FdataMemory.sv
+L0 3
+R10
+r1
+!s85 0
+31
+R19
 R6
 R7
 !i113 1
 ndata@memory
 vDataPath
-R0
 R1
+R17
 !i10b 1
-!s100 :NhlhIZ]<[z`WbQ_@dbIz1
-I9BPaJP:P[3;K^ZaAhhJ743
-R2
+!s100 ^gdojl[[2=mIOBABbiJ`V0
+I:m[LJ=ZTVBJIh>FjS;hgb1
+R13
 !s105 DataPath_sv_unit
 S1
-R3
-w1481255438
+R0
+w1481257184
 8DataPath.sv
 FDataPath.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 n@data@path
 venabledRegister
-R0
 R1
+R17
 !i10b 1
 !s100 `66IX5BHUAlAH[nVaLgM22
 IR1e:k7jJN;]85kbi2MF0S0
-R2
+R13
 !s105 enabledRegister_sv_unit
 S1
-R3
-Z9 w1480700519
+R0
+R18
 8enabledRegister.sv
 FenabledRegister.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 nenabled@register
 vinstructionMemory
-R0
-!s110 1481255457
+R1
+!s110 1481257373
 !i10b 1
 !s100 VW34h6Yc9@XU[mUzLIXBS1
 IBaT;kJUV8?AeINQceK?W^1
-R2
+R13
 !s105 instructionMemory2016_sv_unit
 S1
-R3
-w1481085093
+R0
+w1481256035
 8instructionMemory2016.sv
 FinstructionMemory2016.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-!s108 1481255457.610746
+!s108 1481257373.330319
 !s107 instructionMemory2016.sv|
 !s90 instructionMemory2016.sv|
 !i113 1
 ninstruction@memory
 vmux2to1B5
-R0
 R1
+R17
 !i10b 1
 !s100 zJEEkKU@S@7F_il59W6Z<3
 IfzA9eOU5UO558NGaXN@_P1
-R2
+R13
 !s105 mux2to1B5_sv_unit
 S1
-R3
-R9
+R0
+R18
 8mux2to1B5.sv
 Fmux2to1B5.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 nmux2to1@b5
 vmux4to1B1
-R0
 R1
+R17
 !i10b 1
 !s100 _h[MnjLGbZ951K1IFPXPT2
 Ig<4H:1LLYj]5?_9zzl@FT2
-R2
+R13
 !s105 mux4to1B1_sv_unit
 S1
-R3
-R9
+R0
+R18
 8mux4to1B1.sv
 Fmux4to1B1.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 nmux4to1@b1
 vmux4to1B32
-R0
 R1
+R17
 !i10b 1
 !s100 j3>:Z4G@VVH9``aHDSPRm1
 IJTCkoX@>30ln1lTEmNW3J1
-R2
+R13
 !s105 mux4to1B32_sv_unit
 S1
-R3
-R9
+R0
+R18
 8mux4to1B32.sv
 Fmux4to1B32.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 nmux4to1@b32
 vmux4to1B4
-R0
 R1
+R17
 !i10b 1
 !s100 _i[C>cYBnAZD5?c`SYSZj0
 II2ZZYoBl0bcD28LF>S7f02
-R2
+R13
 !s105 mux4to1B4_sv_unit
 S1
-R3
-R9
+R0
+R18
 8mux4to1B4.sv
 Fmux4to1B4.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 nmux4to1@b4
 vmux4to1B5
-R0
 R1
+R17
 !i10b 1
 !s100 bAXFY4@>^Y^62B>:<;4851
 I<J==lkdG<0nb?0mAg[V962
-R2
+R13
 !s105 mux4to1B5_sv_unit
 S1
-R3
-R9
+R0
+R18
 8mux4to1B5.sv
 Fmux4to1B5.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 nmux4to1@b5
 vmux4to1B8
-R0
 R1
+R17
 !i10b 1
 !s100 ?[BWL7;oPh;fi4]OC<d7Q1
 I<AKzOTmR>i5c@i_NJ@DjS2
-R2
+R13
 !s105 mux4to1B8_sv_unit
 S1
-R3
-R9
+R0
+R18
 8mux4to1B8.sv
 Fmux4to1B8.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 nmux4to1@b8
 vmux8to1B32
-R0
 R1
+R17
 !i10b 1
 !s100 3_^2EaOaCSD;mN9djSZ_=1
 IMO<2eO[:A3jD]Ejei>YeL2
-R2
+R13
 !s105 mux8to1B32_sv_unit
 S1
-R3
-w1481247476
+R0
+w1481123445
 8mux8to1B32.sv
 Fmux8to1B32.sv
 L0 1
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 nmux8to1@b32
 vregisterFile
-R0
 R1
+R17
 !i10b 1
-!s100 [J<P<?zKRcV^z]T9?LTI63
-IoU0[TJ=m1am92=kk6HZDT3
-R2
+!s100 <l;iQ]>;kSfNWe2kl]elb1
+I8__bd?J3ETG_bEQ_[79>U3
+R13
 !s105 registerFile_sv_unit
 S1
-R3
-R8
+R0
+w1481257109
 8registerFile.sv
 FregisterFile.sv
 L0 3
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
 nregister@file
 vtester3
-R0
 R1
+R17
 !i10b 1
-!s100 OgG2DQQI`FDbj0gi?KQ><3
-IeEajHd<M]_Sl0oJ9kad?F3
-R2
+!s100 AAGNjASXbF:4@iTT1b0f`0
+IzSGkK5OTQWR2^chP2Q4<Q2
+R13
 !s105 tester3_sv_unit
 S1
-R3
-R8
+R0
+w1481257363
 8tester3.sv
 Ftester3.sv
 L0 3
-R4
+R10
 r1
 !s85 0
 31
-R5
+R19
 R6
 R7
 !i113 1
