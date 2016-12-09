@@ -41,27 +41,11 @@ always @ (negedge clock) begin
    $display("ALU Result %b", dut.ALUResult);
    //$display("PCJump %b", dut.PCJump);
    $display("add signal %b", dut.theALU.add);
-   //$display("I1 %b", dut.theALU.I1);
-   //$display("I2 %b", dut.theALU.I2);
+   $display("mux PC out %b", dut.PCNext);
+   $display("pc plux 4 %b", dut.pcPlus4);
+   $display("pc jump %b", dut.PCJump);
+   $display("pc jump reg %b", dut.PCJumpReg);
    
-   $display("sum out %b", dut.theALU.sumOut);
-   /*
-   $display("first out %b", dut.theALU.firstOut);
-   $display("second out %b", dut.theALU.secondOut);
-   $display("third out %b", dut.theALU.thirdOut);
-   $display("I0 %b", dut.theALU.muxFinal.I0);
-   $display("I1 %b", dut.theALU.muxFinal.I1);
-   $display("I2 %b", dut.theALU.muxFinal.I2);
-   $display("I3 %b", dut.theALU.muxFinal.I3);
-   $display("I4 %b", dut.theALU.muxFinal.I4);
-   $display("I5 %b", dut.theALU.muxFinal.I5);
-   $display("I6 %b", dut.theALU.muxFinal.I6);
-   $display("I7 %b", dut.theALU.muxFinal.I7);
-   $display("mux s1 out %b", dut.theALU.muxFinal.s2.O);
-   $display("mux s1 out input %b", dut.theALU.muxFinal.s2.I1);
-   $display("Step A %b", dut.theALU.muxFinal.OStepA);
-   $display("Step B %b", dut.theALU.muxFinal.OStepB);   
-   */
    $display("final out %b", dut.theALU.finalOut);
    
    

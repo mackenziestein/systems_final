@@ -40,10 +40,12 @@ module registerFile(input logic [4:0] A1,
    enabledRegister r7(WD3,reg7,CLK,yesWrite7);
  
       
-   mux4to1B32 mpxA1(A1[1],A1[0], reg3, reg2, reg1, reg0, RD1);
-
-   mux4to1B32 mpxA2(A2[1],A2[0], reg3, reg2, reg1, reg0, RD2);
-
+   //mux4to1B32 mpxA1(A1[1],A1[0], reg3, reg2, reg1, reg0, RD1);
+   mux8to1B32 mpxA1(A1[2], A1[1], A1[0], reg7, reg6, reg5, reg4, reg3, reg2, reg1, reg0, RD1);
+   
+   //mux4to1B32 mpxA2(A2[1],A2[0], reg3, reg2, reg1, reg0, RD2);
+   mux8to1B32 mpxA2(A2[2], A2[1], A2[0], reg7, reg6, reg5, reg4, reg3, reg2, reg1, reg0, RD2);
+   
    
    always @ (negedge CLK)
      begin

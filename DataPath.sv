@@ -58,12 +58,12 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    // it will have many more ports later
 
 
-   logic [0:0] 	memToReg, memWrite, branchEnable, ALUSrc, regDst, jump, alu4, alu3, alu2, alu1, alu0;
+   logic [0:0] 	memToReg, memWrite, branchEnable, ALUSrc, regDst, jump, jumpReg, alu4, alu3, alu2, alu1, alu0;
    logic [4:0] 	ALUControl;
    
    
    
-   Control theControl(instr, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, regWriteEnable, jump, alu4, alu3, alu2, alu1, alu0);
+   Control theControl(instr, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst, regWriteEnable, jump, jumpReg, alu4, alu3, alu2, alu1, alu0);
    
    
    // construct the register file with (currently mostly) unused values to connect to it
@@ -125,14 +125,17 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
    assign WD = RD2;
    assign WE = memWrite;
 
-   logic [31:0]        PCJump, jumpInst, PCNext;
+   logic [31:0]        PCJump, jumpInst, PCNext, PCJumpReg;
    logic [1:0] 	       constant0;
    
    assign constant0 = 2'b0;
    //assign jumpInst = {instr[29:0], constant0[1:0]};
    assign PCJump = {pcQ[31:28], instr[25:0], constant0[1:0]};
-
-   mux4to1B32 jumpPC(1'b0, jump, 32'b0, 32'b0, PCJump, pcPlus4, PCNext);
+   assign PCJumpReg = RD1;
+   
+   mux8to1B32 muxPC(branchEnable, jump, jumpReg, 32'b0, 32'b0, 32'b0, 32'b1, PCJumpReg, PCJump, 32'b0, pcPlus4, PCNext);
+   
+   //mux4to1B32 jumpPC(1'b0, jump, 32'b0, 32'b0, PCJump, pcPlus4, PCNext);
    assign pcD = PCNext;
    
    
