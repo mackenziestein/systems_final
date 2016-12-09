@@ -26,29 +26,12 @@ always
    
 // set up debugging display and a way to end the simulation
    
-always @ (negedge clock) begin 
+always @ (negedge clock) begin
+   $display("PC INFO");
+   $display("Reg write enable %b", regWriteEnable);
    $display("PC Address : %h",pcQ);
    $display("PC D: %h ",pcD);
    $display("Instruction : %h", instruction);
-   $display("Reg write enable %b", regWriteEnable);
-   $display("Reg 0 write signal %b", dut.theRegisters.yesWrite0);
-   $display("Reg 1 write signal %b", dut.theRegisters.yesWrite1);
-   $display("Reg 2 write signal %b", dut.theRegisters.yesWrite2);
-   $display("Reg 3 write signal %b", dut.theRegisters.yesWrite3);
-   $display("Reg 7 write signal %b", dut.theRegisters.yesWrite7);
-   $display("ALUSrc %b", dut.theControl.ALUSrc);
-   //$display("RD2 mux %b", dut.muxRD2.O);
-   $display("ALU Result %b", dut.ALUResult);
-   //$display("PCJump %b", dut.PCJump);
-   $display("add signal %b", dut.theALU.add);
-   $display("mux PC out %b", dut.PCNext);
-   $display("pc plux 4 %b", dut.pcPlus4);
-   $display("pc jump %b", dut.PCJump);
-   $display("pc jump reg %b", dut.PCJumpReg);
-   
-   $display("final out %b", dut.theALU.finalOut);
-   
-   
    $display(" - ");
    
    
