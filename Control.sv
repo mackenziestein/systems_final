@@ -34,7 +34,7 @@ module Control(ins, memToReg, memWrite, branchEnable, ALUControl, ALUSrc, regDst
    assign branchEnable = bleu;
    assign ALUControl = {alu4, alu3, alu2, alu1, alu0};
    assign ALUSrc = nori | lw | sw;
-   assign regDst = andr | norr | nori | notr | rolv | rorv;
+   assign regDst = andr | norr | notr | rolv | rorv;
    assign regWriteEnable = lw | andr | norr | nori | notr | rolv | rorv | jal;  
    assign jump = jr | jal;
    

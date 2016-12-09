@@ -39,10 +39,12 @@ module ALU(input logic  [31:0] I1,
    
    assign rolv = ~Selector[4] & ~Selector[3] & ~Selector[2] & ~Selector[1] & ~Selector[0];
    assign rorv = ~Selector[4] & ~Selector[3] & ~Selector[2] & ~Selector[1] & Selector[0];
+   assign chooseThird = rolv | rorv;
    
    // ADDITION - for add, lw, sw
    assign sumOut = I1 + I2;
-
+   //assign sumOut = 32'b111;
+   
    // also need: nor, nori (same as nor?), not (nor w 0), ?? for rotations
 
    // ROTATE RIGHT
@@ -58,16 +60,16 @@ module ALU(input logic  [31:0] I1,
    mux8to1B32 rotateRight(I1[2], I1[1], I1[0], Rrot7, Rrot6, Rrot5, Rrot4, Rrot3, Rrot2, Rrot1, Rrot0, rotRight);
 
    // ROTATE LEFT
-   assign Lrot0 = {I2[30:0], I2[31:31]};
-   assign Lrot1 = {I2[29:0], I2[31:30]};
-   assign Lrot2 = {I2[28:0], I2[31:29]};
-   assign Lrot3 = {I2[27:0], I2[31:28]};
-   assign Lrot4 = {I2[26:0], I2[31:27]};
-   assign Lrot5 = {I2[25:0], I2[31:26]};
-   assign Lrot6 = {I2[24:0], I2[31:25]};
-   assign Lrot7 = {I2[23:0], I2[31:24]};
+   assign Lrot0 = I2;
+   assign Lrot1 = {I2[30:0], I2[31:31]};
+   assign Lrot2 = {I2[29:0], I2[31:30]};
+   assign Lrot3 = {I2[28:0], I2[31:29]};
+   assign Lrot4 = {I2[27:0], I2[31:28]};
+   assign Lrot5 = {I2[26:0], I2[31:27]};
+   assign Lrot6 = {I2[25:0], I2[31:26]};
+   assign Lrot7 = {I2[24:0], I2[31:25]};
 
-   mux8to1B32 rotateLeft(I1[2], I1[1], I1[0], Rrot7, Rrot6, Rrot5, Rrot4, Rrot3, Rrot2, Rrot1, Rrot0, rotLeft);
+   mux8to1B32 rotateLeft(I1[2], I1[1], I1[0], Lrot7, Lrot6, Lrot5, Lrot4, Lrot3, Lrot2, Lrot1, Lrot0, rotLeft);
 
    // NOR
    assign norOut = ~(I1 | I2);
@@ -86,8 +88,11 @@ module ALU(input logic  [31:0] I1,
    //mux8to1B32 first(add, norr, nori, 32'b0, 32'b11110000, 32'b11001100, sumOut, 32'b11111111, norOut, norIOut, 32'b10101010, firstOut);
    mux8to1B32 first(add, norr, nori, 32'b0, 32'b0, 32'b0, sumOut, 32'b0, norOut, norIOut, 32'b0, firstOut);
    mux4to1B32 second(notr, bleu, 32'b0, notOut, bleuOut, 32'b0, secondOut);
-   mux4to1B32 third(rolv, rorv, 32'b0, rotRight, rotLeft, 32'b0, thirdOut);
+   mux4to1B32 third(rolv, rorv, 32'b0, rotLeft, rotRight, 32'b0, thirdOut);
 
+   //assign chooseThird = 1'b0;
+   
+   
    mux8to1B32 muxFinal(chooseThird, chooseSecond, chooseFirst, 32'b0, 32'b0, 32'b0, thirdOut, 32'b0, secondOut, firstOut, 32'b0, finalOut);
 
    assign O = finalOut;

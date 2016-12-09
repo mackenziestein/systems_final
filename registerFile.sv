@@ -51,6 +51,7 @@ module registerFile(input logic [4:0] A1,
 	$display("register 1 %h ",reg1);
 	$display("register 2 %h ",reg2);
 	$display("register 3 %h ",reg3);
+	$display("register 3 %b ",reg3);
 	$display("register 7 hex %h ",reg7);
 	$display("register 7 dec %d ",reg7);
 	$display("register 7 bin %b ",reg7);
