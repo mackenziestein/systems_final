@@ -1,5 +1,5 @@
 # vsim -lib work -c tester3 
-# Start time: 21:05:09 on Dec 08,2016
+# Start time: 21:22:05 on Dec 08,2016
 # Loading sv_std.std
 # Loading work.tester3
 # Loading work.DataPath
@@ -569,4 +569,5 @@
 #    Time: 800 ns  Iteration: 1  Instance: /tester3
 # Break in Module tester3 at tester3.sv line 58
 # Stopped at tester3.sv line 58
-# FATAL ERROR: Unable to read lock file necessary for use of uncounted nodelocked license. Exiting.
+# End time: 21:22:12 on Dec 08,2016, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0

@@ -10,7 +10,7 @@ cModel Technology
 Z0 d/home/class19/mstein19/cs161/DataPath
 vadder
 Z1 DXx6 sv_std 3 std 0 22 <EOTafDcUY:cQeO^ICn]m3
-Z2 !s110 1481249107
+Z2 !s110 1481250116
 !i10b 1
 !s100 ?OPS[<eAO@3D`4HUBld]Q3
 Ig_A_[@PXRMB<;lHRF9cJQ2
@@ -26,7 +26,7 @@ Z5 OV;L;10.3d;59
 r1
 !s85 0
 31
-Z6 !s108 1481249107.301673
+Z6 !s108 1481250116.526648
 Z7 !s107 tester3.sv|registerFile.sv|mux8to1B32.sv|mux4to1B8.sv|mux4to1B5.sv|mux4to1B4.sv|mux4to1B32.sv|mux4to1B1.sv|mux2to1B5.sv|instructionMemory2016.sv|enabledRegister.sv|DataPath.sv|dataMemory.sv|Control.sv|ALU.sv|adder.sv|
 Z8 !s90 adder.sv|ALU.sv|Control.sv|dataMemory.sv|DataPath.sv|enabledRegister.sv|instructionMemory2016.sv|mux2to1B5.sv|mux4to1B1.sv|mux4to1B32.sv|mux4to1B4.sv|mux4to1B5.sv|mux4to1B8.sv|mux8to1B32.sv|registerFile.sv|tester3.sv|
 !i113 1
@@ -63,7 +63,7 @@ R3
 !s105 Control_sv_unit
 S1
 R0
-w1481248249
+w1481250100
 8Control.sv
 FControl.sv
 L0 1
