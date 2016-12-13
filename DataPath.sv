@@ -103,7 +103,7 @@ module DataPath(clock, pcQ, instr, pcD, regWriteEnable);
 
    //PC THINGS
 
-   mux4to1B32 muxBranch(1'b0, PCBranch[31], 32'b0, 32'b0, SignImm, pcPlus4, muxBranchOut);
+   mux4to1B32 muxBranch(1'b0, ALUResult[31], 32'b0, 32'b0, PCBranch, pcPlus4, muxBranchOut);
 
    logic [31:0]        PCJump, jumpInst, PCNext, PCJumpReg;
 
@@ -133,6 +133,10 @@ always @ (negedge clock) begin
    $display("Reg 5 write signal %b", theRegisters.yesWrite3);
    $display("Reg 6 write signal %b", theRegisters.yesWrite3);
    $display("Reg 7 write signal %b", theRegisters.yesWrite7);
+   $display("~~~~~~~~~~~~~~~~~~~~~~~  PCBranch %b", PCBranch);
+   $display("~~~~~~~~~~~~~~~~~~~~~~~  ALUResult %b", ALUResult);
+   $display("~~~~~~~~~~~~~~~~~~~~~~~  SignImm %b", SignImm);
+   
 end // always
    
 endmodule
