@@ -1,5 +1,5 @@
 # vsim -lib work -c tester3 
-# Start time: 23:03:28 on Dec 12,2016
+# Start time: 01:42:40 on Dec 13,2016
 # Loading sv_std.std
 # Loading work.tester3
 # Loading work.DataPath
@@ -756,5 +756,5 @@
 #    Time: 800 ns  Iteration: 1  Instance: /tester3
 # Break in Module tester3 at tester3.sv line 41
 # Stopped at tester3.sv line 41
-# End time: 23:04:03 on Dec 12,2016, Elapsed time: 0:00:35
+# End time: 01:43:25 on Dec 13,2016, Elapsed time: 0:00:45
 # Errors: 0, Warnings: 0
